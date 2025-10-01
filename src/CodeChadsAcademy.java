@@ -6,7 +6,7 @@ public class CodeChadsAcademy {
 
         int nota1 = 80;
         int nota2 = 55;
-        int nota3 = 100;
+        int nota3 = 92;
         int nota4, nota5;
 
         if (nota2 < 60) {
