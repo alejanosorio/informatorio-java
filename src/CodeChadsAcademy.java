@@ -58,6 +58,16 @@ public class CodeChadsAcademy {
             }
         }
         System.out.println("Notas ordenadas de mayor a menor: " + Arrays.toString(notas));
+        boolean progres = true;
+        for (int i = 0; i < notas.length - 1; i++) {
+            if (notas[i+1] <= notas[i]) {
+                progres = false;
+                break;
+            }
+        }
+        if (progres) {
+            System.out.println("¡Nivel PROGRESIVO! Sos un Stone Chad en crecimiento 📈");
+        }
 
 
 
