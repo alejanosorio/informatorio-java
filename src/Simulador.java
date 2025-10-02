@@ -77,54 +77,7 @@ public class Simulador {
         System.out.println("----------------------------------");
         System.out.println("TOTAL FINAL: " + total);
 
-        int[][] clase = {
-                {40, 65, 90, 100, 95},
-                {70, 65, 60, 65, 70},
-                {100, 95, 90, 75, 95},
-                {50, 50, 30, 100, 70}
-        };
 
-        double mejorProm = 0;
-        int proMejor = 0;
-
-        double menorDesv = Double.MAX_VALUE;
-        int masRegular = 0;
-
-        int peorTercera = Integer.MAX_VALUE;
-        int peor = 0;
-
-        for (int i = 0; i < clase.length; i++) {
-            int suma = 0;
-            for (int n : clase[i]) suma += n;
-            double prom = suma / 5.0;
-
-            if (prom > mejorProm) {
-                mejorProm = prom;
-                proMejor = i;
-            }
-
-            // Desviación (diferencia máx - min)
-            int max = clase[i][0], min = clase[i][0];
-            for (int n : clase[i]) {
-                if (n > max) max = n;
-                if (n < min) min = n;
-            }
-            int desv = max - min;
-            if (desv < menorDesv) {
-                menorDesv = desv;
-                masRegular= i;
-            }
-
-            // Peor en tercera
-            if (clase[i][2] < peorTercera) {
-                peorTercera = clase[i][2];
-                peor = i;
-            }
-        }
-
-        System.out.println("Mejor promedio: Estudiante " + (proMejor+1));
-        System.out.println("Más regular: Estudiante " + (masRegular+1));
-        System.out.println("Peor en la tercera prueba: Estudiante " + (peor+1));
     }
 }
 
