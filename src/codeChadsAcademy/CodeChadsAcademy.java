@@ -1,3 +1,5 @@
+package codeChadsAcademy;
+
 import java.util.Arrays;
 
 public class CodeChadsAcademy {
